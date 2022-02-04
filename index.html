@@ -6,14 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPS Game</title>
     <link rel="stylesheet" href="style.css">
-    <script src="javascript.js"></script>
+    <script src="javascript.js" defer></script>
 </head>
 <body>
     <div id="header">Rock, Paper, Scissors!</div>
     <div id="gameBoard">
-        <button onclick="playRound('ROCK')">ROCK</button>
-        <button onclick="playRound('PAPER')">PAPER</button>
-        <button onclick="playRound('SCISSORS')">SCISSORS</button>
+        <div id="scoreboard">
+            <div class="scoreContainer">
+                <div class="scoreLabel">YOU</div>
+                <div class="score" id="playerScore">0</div>
+            </div>
+            <div class="scoreLabel"> vs. </div>
+            <div class="scoreContainer">
+                <div class="scoreLabel">COMPUTER</div>
+                <div class="score" id="computerScore">0</div>
+            </div>
+        </div>
+        <div id="infoBlock">
+            <div id="selections">
+                ...
+                <!-- Insert results of each round here via js -->
+            </div>
+            <div id="resultStatement">
+                Select an option below to start the game.
+                <!-- Insert results of each round here via js -->
+            </div>
+        </div>
+        <div id="buttonContainer">
+            <button class="playButton" id="ROCK">ROCK</button>
+            <button class="playButton" id="PAPER">PAPER</button>
+            <button class="playButton" id="SCISSORS">SCISSORS</button>
+        </div>
     </div>
     <div id="footer">
         <button onclick="reset()">Reset</button>
